@@ -26,3 +26,22 @@ int GetArraySizeFromUser(string message)
     int num = Convert.ToInt32(Console.ReadLine());
     return num;
 }
+
+string GetUserInputString(string message)
+{
+    Console.WriteLine(message);
+    string str = Console.ReadLine();
+    return str;
+}
+
+string[] CreateAndFillArrayByUser(int arrSize)
+{
+    string[] arr = new string[arrSize];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = GetUserInputString($"Insert {i+1} value: ");
+    }
+
+    return arr;
+}
