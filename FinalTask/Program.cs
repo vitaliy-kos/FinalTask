@@ -8,3 +8,21 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+
+void PrintArray(string[] arr, string sep = ",")
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i < arr.Length - 1) Console.Write($"“{arr[i]}”{sep} ");
+        else Console.Write($"“{arr[i]}”");
+    }
+    Console.WriteLine("]");
+}
+
+int GetArraySizeFromUser(string message)
+{
+    Console.WriteLine(message);
+    int num = Convert.ToInt32(Console.ReadLine());
+    return num;
+}
