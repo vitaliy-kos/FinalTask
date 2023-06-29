@@ -82,5 +82,5 @@ PrintArray(filledArray);
 
 int stringLength = 3;
 string[] resultArray = FilterArrayLessLengthElem(filledArray, stringLength);
-Console.WriteLine($"Filtred array with values less then {stringLength} signs: ");
+Console.WriteLine($"Filtred array with values less then or equal to {stringLength} signs: ");
 PrintArray(resultArray);
