@@ -45,3 +45,31 @@ string[] CreateAndFillArrayByUser(int arrSize)
 
     return arr;
 }
+
+string[] FilterArrayLessLengthElem(string[] inputArray, int strLength)
+{
+    string[] outputArray = new string[CountArrayLessLengthElem(inputArray, strLength)];
+
+    for (int i = 0, j = 0; i < inputArray.Length; i++)
+    {
+        if(inputArray[i].Length <= strLength) {
+            outputArray[j] = inputArray[i];
+            j++;
+        }
+    }
+
+    return outputArray;
+}
+
+int CountArrayLessLengthElem(string[] inpArr, int strLen)
+{
+    int count = 0;
+
+    for(int i = 0; i < inpArr.Length; i++) {
+        if(inpArr[i].Length <= strLen) {
+            count++;
+        }
+    }
+
+    return count;
+}
