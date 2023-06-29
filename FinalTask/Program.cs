@@ -73,3 +73,14 @@ int CountArrayLessLengthElem(string[] inpArr, int strLen)
 
     return count;
 }
+
+int arraySize = GetArraySizeFromUser("Insert quantity elements in array: ");
+
+string[] filledArray = CreateAndFillArrayByUser(arraySize);
+Console.WriteLine("Inserted array: ");
+PrintArray(filledArray);
+
+int stringLength = 3;
+string[] resultArray = FilterArrayLessLengthElem(filledArray, stringLength);
+Console.WriteLine($"Filtred array with values less then {stringLength} signs: ");
+PrintArray(resultArray);
