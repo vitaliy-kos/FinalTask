@@ -30,7 +30,7 @@ int GetArraySizeFromUser(string message)
 string GetUserInputString(string message)
 {
     Console.WriteLine(message);
-    string str = Console.ReadLine();
+    string str = Console.ReadLine()!;
     return str;
 }
 
